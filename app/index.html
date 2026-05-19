@@ -28,6 +28,33 @@
 
 <body>
 	<div class="app">
+		<div class="header-mob-meny">
+			<div class="container">
+				<nav class="header__nav header__nav--mob" aria-label="Главное меню">
+					<ul class="header__nav-list">
+						<li class="header__nav-item header__nav-item--has-sub">
+							<a href="#" class="header__nav-link" aria-expanded="false">
+								<span>Иностранным гражданам</span>
+								<svg class="header__nav-caret" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true">
+									<path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</a>
+							<ul class="header__nav-sub">
+								<li><a href="#" class="header__nav-sub-link">Получение гражданства РФ</a></li>
+								<li><a href="#" class="header__nav-sub-link">Регистрационный учёт</a></li>
+								<li><a href="#" class="header__nav-sub-link">Разрешение на работу</a></li>
+								<li><a href="#" class="header__nav-sub-link">Полезные ссылки</a></li>
+							</ul>
+						</li>
+						<li class="header__nav-item"><a href="#" class="header__nav-link">Новости</a></li>
+						<li class="header__nav-item"><a href="#" class="header__nav-link">Документы</a></li>
+						<li class="header__nav-item"><a href="#" class="header__nav-link">День правовой грамотности</a></li>
+						<li class="header__nav-item"><a href="#" class="header__nav-link">Об учреждении</a></li>
+						<li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 		<header class="header">
 			<div class="header__top">
 				<div class="container">
@@ -41,10 +68,21 @@
 					<div class="header__middle-bg-element header__middle-bg-element--v3"></div>
 				</div>
 				<div class="container">
-					<a href="" class="header__logo">
+					<div class="header__middle-left">
+						<a href="" class="header__logo">
 						<img src="img/_src/header-logo.png" alt="" class="header__logo-img">
 					</a>
 					<p class="header__logo-text">Государственное казенное учреждение Краснодарского края <span><br></span> «Многофункциональный миграционный центр»</p>
+					</div>
+
+					<div class="header__middle-right">
+						<div class="burger-meny">
+							<span class="burger-meny-line burger-meny-line-1"></span>
+							<span class="burger-meny-line burger-meny-line-2"></span>
+				
+						</div>
+					</div>
+					
 				</div>
 			</div>
 			<div class="header__down">
