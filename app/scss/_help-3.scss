@@ -1,0 +1,242 @@
+.help-3-sec {
+    padding-top: 200px;
+    padding-bottom: 130px;
+
+    .container {
+        padding-top: 60px;
+    }
+}
+
+.help-3-sec__offenses-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.help-3-sec__offenses-title {
+    font-family: $secondFontPtSerif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3;
+    color: #1B3A6B;
+    margin-bottom: 10px;
+}
+
+.help-3-sec__offenses-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #6A7282;
+}
+
+.help-3-sec__offenses-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 24px);
+    margin-left: -12px;
+    row-gap: 24px;
+    margin-bottom: 60px;
+}
+
+.help-3-offense-card {
+    width: calc(50% - 24px);
+    margin: 0 12px;
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #F3F4F6;
+    border-left-width: 4px;
+    border-left-style: solid;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+}
+
+.help-3-offense-card__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+        display: block;
+    }
+}
+
+.help-3-offense-card__body {
+    min-width: 0;
+}
+
+.help-3-offense-card__title {
+    font-family: $secondFontPtSerif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.35;
+    color: #1B3A6B;
+    margin-bottom: 8px;
+}
+
+.help-3-offense-card__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #6A7282;
+    margin-bottom: 14px;
+}
+
+.help-3-offense-card__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: $fontInter;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.3;
+
+    svg {
+        flex-shrink: 0;
+        display: block;
+    }
+}
+
+.help-3-sec__faq {
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.help-3-sec__faq-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.help-3-sec__faq-title {
+    font-family: $secondFontPtSerif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3;
+    color: #1B3A6B;
+    margin-bottom: 15px;
+}
+
+.help-3-sec__faq-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.help-3-sec__faq-line-element {
+    height: 6px;
+    border-radius: 100px;
+}
+
+.help-3-sec__faq-line-element--1 {
+    width: 50px;
+    background: #0C54A0;
+    margin-right: 8px;
+}
+
+.help-3-sec__faq-line-element--2 {
+    width: 24px;
+    background: #068249;
+    margin-right: 8px;
+}
+
+.help-3-sec__faq-line-element--3 {
+    width: 16px;
+    background: #CC1B55;
+}
+
+.help-3-sec__faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.help-3-sec__faq-item {
+    background: #ffffff;
+    border: 1px solid #F3F4F6;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.06);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.help-3-sec__faq-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.help-3-sec__faq-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    background: #1B3A6B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: $fontInter;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.help-3-sec__faq-question {
+    flex: 1;
+    font-family: $fontInter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.35;
+    color: #1B3A6B;
+}
+
+.help-3-sec__faq-answer {
+    padding-left: 52px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #6A7282;
+}
+
+@media only screen and (max-width: 1300px) {
+    .help-3-offense-card {
+        width: calc(100% - 24px);
+    }
+
+    .help-3-sec {
+        padding-top: 109px;
+        padding-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+
+    .help-3-sec__offenses-title,
+    .help-3-sec__faq-title {
+        font-size: 20px;
+    }
+
+    .help-3-offense-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .help-3-sec__faq-answer {
+        padding-left: 0;
+    }
+
+    .help-3-sec {
+        padding-bottom: 60px;
+
+        .container {
+            padding-top: 40px;
+        }
+    }
+}
