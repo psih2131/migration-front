@@ -104,13 +104,14 @@
     border: 0;
 }
 
-.news-sec__articles {
+.news-sec-page__articles {
     padding-top: 32px;
     display: flex;
     flex-wrap: wrap;
     width: calc(100% + 24px);
-    margin-left: 12px;
+    margin-left: -12px;
     row-gap: 24px;
+ 
 }
 
 .news-card-element {
@@ -271,7 +272,7 @@
         row-gap: 8px;
     }
 
-    .news-sec__articles {
+    .news-sec-page__articles {
         width: 100%;
         margin-left: 0;
         justify-content: space-between;
