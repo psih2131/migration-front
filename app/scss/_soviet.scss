@@ -1,0 +1,219 @@
+.soviet-sec {
+    padding-top: 200px;
+    padding-bottom: 130px;
+    background: #F4F7F9;
+
+    .container {
+        padding-top: 60px;
+    }
+}
+
+
+
+.soviet-sec__dialogue {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #E8EDF2;
+    padding-top: 35px;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.soviet-card {
+    border-radius: 16px;
+    padding: 24px 28px;
+    background: #ffffff;
+    border: 1px solid #E8EDF2;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
+    margin-bottom: 35px;
+}
+
+.soviet-card--user {
+    align-self: flex-start;
+    
+    width: 630px;
+}
+
+.soviet-card--specialist {
+    align-self: flex-end;
+   
+    width: 790px;
+ 
+}
+
+.soviet-card__header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.soviet-card__header--specialist {
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 16px;
+}
+
+.soviet-card__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+        display: block;
+    }
+}
+
+.soviet-card__avatar--user {
+    background: #E1EEF9;
+    color: #0C54A0;
+}
+
+.soviet-card__avatar--specialist {
+    background: #FDE8E8;
+    color: #CC1B55;
+}
+
+.soviet-card__meta {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+.soviet-card__name {
+    font-family: $secondFontPtSerif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.35;
+    color: #1B3A6B;
+}
+
+.soviet-card__country {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    gap: 6px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666666;
+    span{
+        font-family: $secondFontPtSerif;
+        color: #1B3A6B;
+        font-weight: 700;
+    }
+
+    svg {
+        flex-shrink: 0;
+        display: block;
+        color: #99A1AF;
+    }
+}
+
+.soviet-card__role {
+    flex: 1;
+    min-width: 0;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: $secondFontPtSerif;
+    line-height: 1.45;
+    color: #1B3A6B;
+}
+
+.soviet-card__specialist-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.soviet-card__specialist-meta .soviet-card__name {
+    margin-bottom: 0;
+}
+
+.soviet-card__body {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4A5565;
+
+    p + p {
+        margin-top: 12px;
+    }
+
+    ul {
+        margin-top: 12px;
+        padding-left: 20px;
+    }
+
+    li {
+        color: #666666;
+    }
+
+    li + li {
+        margin-top: 8px;
+    }
+}
+
+.soviet-card--user .soviet-card__body {
+    padding-left: 54px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .soviet-sec .container{
+        padding-top: 40px;
+    }
+    .soviet-sec{
+        padding-top: 109px;
+        padding-bottom: 60px;
+    }
+    .soviet-card--user,
+    .soviet-card--specialist {
+        width: 100%;
+        max-width: none;
+    }
+
+
+}
+
+@media only screen and (max-width: 760px) {
+   
+
+    .soviet-card {
+        padding: 20px;
+        margin-bottom: 24px;
+    }
+
+    .soviet-card--user .soviet-card__body {
+        padding-left: 0;
+    }
+
+    .soviet-card__header--specialist {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .soviet-card__specialist-meta {
+        width: 100%;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .soviet-card__meta{
+        flex-wrap: wrap;
+    }
+    .soviet-card__country{
+        margin-left: 0;
+        width: 100%;
+        margin-top: 5px;
+    }
+    .soviet-sec__dialogue{
+        padding-top: 24px;
+    }
+}
