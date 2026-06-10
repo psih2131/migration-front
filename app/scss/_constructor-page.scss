@@ -1,0 +1,241 @@
+.constuctor-page-main {
+    padding-top: 245px;
+    padding-bottom: 80px;
+}
+.constr-description-sec{
+    padding-bottom: 50px;
+}
+.constr-description-sec__inner{
+    border-left: 4px solid #1B3A6B;
+    border-radius: 14px;
+    background: #F0F9FF;
+    padding: 24px;
+}
+
+.const-text-editor{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+        font-family: $secondFontPtSerif;
+        font-weight: 700;
+        color: #1B3A6B;
+        font-size: 18px;
+        line-height: 1.35;
+ 
+    }
+
+    p{
+        font-size: 16px;
+        line-height: 1.65;
+        color: #364153;
+        margin-bottom: 16px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    ul{
+        list-style: disc;
+        padding-left: 24px;
+        margin-bottom: 16px;
+       li{
+        list-style: disc;
+        font-size: 16px;
+        line-height: 1.65;
+        color: #364153;
+        margin-bottom: 10px;
+
+       }
+    }
+    
+    ol{
+        list-style: decimal;
+        padding-left: 24px;
+        margin-bottom: 10px;
+        
+        li{
+            list-style: decimal;
+            font-size: 16px;
+            line-height: 1.65;
+            color: #364153;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.constr-prevention-sec {
+    padding-bottom: 50px;
+}
+
+.constr-prevention-sec__header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.constr-prevention-sec__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.constr-prevention-sec__label-line {
+    width: 48px;
+    height: 1px;
+    background: #D48806;
+}
+
+.constr-prevention-sec__label-text {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #D48806;
+}
+
+.constr-prevention-sec__title {
+    max-width: 760px;
+    margin: 0 auto 16px;
+    font-family: $secondFontPtSerif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3;
+    color: #1B3A6B;
+}
+
+.constr-prevention-sec__accent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.constr-prevention-sec__accent-bar {
+    height: 6px;
+    border-radius: 100px;
+}
+
+.constr-prevention-sec__accent-bar--yellow {
+    width: 50px;
+    background: #EAB308;
+}
+
+.constr-prevention-sec__accent-bar--red {
+    width: 50px;
+    background: #DC2626;
+}
+
+.constr-prevention-sec__grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 24px);
+    margin-left: -12px;
+    row-gap: 24px;
+}
+
+.constr-prevention-card {
+    width: calc(50% - 24px);
+    margin: 0 12px;
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #F3F4F6;
+    border-radius: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.constr-prevention-card__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+        display: block;
+    }
+}
+
+.constr-prevention-card__body {
+    min-width: 0;
+}
+
+.constr-prevention-card__title {
+    margin-bottom: 8px;
+    font-family: $secondFontPtSerif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.35;
+    color: #1B3A6B;
+}
+
+.constr-prevention-card__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #6A7282;
+}
+
+.constr-legislation-sec {
+    padding-bottom: 50px;
+}
+
+.constr-legislation-sec__inner {
+    border-left: 4px solid #C07020;
+    border-radius: 14px;
+    background: #FFF9EB;
+    padding: 24px 24px 24px 28px;
+
+    .const-text-editor {
+        h2 {
+            margin-bottom: 16px;
+        }
+
+        ul {
+            margin-bottom: 0;
+
+            li {
+                margin-bottom: 12px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+.constr-docs-sec{
+    padding-bottom: 50px;
+}
+.constr-docs-sec__title{
+    font-family: $secondFontPtSerif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3;
+    color: #1B3A6B;
+    margin-bottom: 32px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .constuctor-page-main{
+        padding-top: 149px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .constr-prevention-card {
+        width: calc(100% - 24px);
+    }
+
+    .constr-prevention-sec__title {
+        font-size: 20px;
+    }
+}
