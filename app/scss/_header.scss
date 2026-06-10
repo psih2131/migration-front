@@ -125,19 +125,19 @@ $header-middle-slant: clamp(63px, 12.6vw, 144px);
     gap: 8px;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
-.header__nav-item {
+.header__nav-list > li {
     position: relative;
     display: flex;
-}
-
-.header__nav-link {
     --pill-color: #0C54A0;
     --pill-bg: rgba(12, 84, 160, 0.10);
     --pill-bg-hover: rgba(12, 84, 160, 0.18);
     --pill-shadow: rgba(12, 84, 160, 0.25);
+}
 
+.header__nav-list > li > a {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -167,77 +167,73 @@ $header-middle-slant: clamp(63px, 12.6vw, 144px);
     }
 }
 
-.header__nav-item:nth-child(1) .header__nav-link {
+.header__nav-list > li:nth-child(1) {
     --pill-color: #4A9D7A;
     --pill-bg: rgba(6, 130, 73, 0.05);
     --pill-bg-hover: rgba(6, 130, 73, 0.10);
     --pill-shadow: rgba(6, 130, 73, 0.15);
 }
 
-.header__nav-item:nth-child(2) .header__nav-link {
+.header__nav-list > li:nth-child(2) {
     --pill-color: #5A85BA;
     --pill-bg: rgba(12, 84, 160, 0.05);
     --pill-bg-hover: rgba(12, 84, 160, 0.10);
     --pill-shadow: rgba(12, 84, 160, 0.15);
 }
 
-.header__nav-item:nth-child(3) .header__nav-link {
+.header__nav-list > li:nth-child(3) {
     --pill-color: #9580E8;
     --pill-bg: rgba(110, 72, 232, 0.05);
     --pill-bg-hover: rgba(110, 72, 232, 0.10);
     --pill-shadow: rgba(110, 72, 232, 0.15);
 }
 
-.header__nav-item:nth-child(4) .header__nav-link {
+.header__nav-list > li:nth-child(4) {
     --pill-color: #D86B8E;
     --pill-bg: rgba(204, 27, 85, 0.05);
     --pill-bg-hover: rgba(204, 27, 85, 0.10);
     --pill-shadow: rgba(204, 27, 85, 0.15);
 }
 
-.header__nav-item:nth-child(5) .header__nav-link {
+.header__nav-list > li:nth-child(5) {
     --pill-color: #E8A95C;
     --pill-bg: rgba(229, 138, 0, 0.06);
     --pill-bg-hover: rgba(229, 138, 0, 0.12);
     --pill-shadow: rgba(229, 138, 0, 0.18);
 }
 
-.header__nav-item:nth-child(6) .header__nav-link {
+.header__nav-list > li:nth-child(6) {
     --pill-color: #6BB8C4;
     --pill-bg: rgba(26, 156, 176, 0.06);
     --pill-bg-hover: rgba(26, 156, 176, 0.12);
     --pill-shadow: rgba(26, 156, 176, 0.18);
 }
 
-.header__nav-item--active>.header__nav-link {
-    background-color: var(--pill-bg-hover);
-    box-shadow: 0 6px 14px -8px var(--pill-shadow);
-}
-
-.header__nav-caret {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.header__nav-list > li:has(> .sub-menu) > a::after {
+    content: '';
+    flex-shrink: 0;
+    width: 10px;
+    height: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     transition: transform 0.3s ease;
-    color: currentColor;
-
-    svg {
-        display: block;
-    }
 }
 
-.header__nav-item--has-sub:hover .header__nav-caret,
-.header__nav-item--has-sub:focus-within .header__nav-caret {
+.header__nav-list > li:has(> .sub-menu):hover > a::after,
+.header__nav-list > li:has(> .sub-menu):focus-within > a::after {
     transform: rotate(180deg);
 }
 
-.header__nav-sub {
+.sub-menu {
     position: absolute;
     top: calc(100% + 8px);
     left: 0;
     min-width: 280px;
     padding: 8px;
     margin: 0;
+    list-style: none;
     background: #ffffff;
     border-radius: 14px;
     box-shadow: 0 18px 40px rgba(12, 84, 160, 0.14), 0 4px 10px rgba(12, 84, 160, 0.06);
@@ -248,14 +244,14 @@ $header-middle-slant: clamp(63px, 12.6vw, 144px);
     z-index: 5;
 }
 
-.header__nav-item--has-sub:hover .header__nav-sub,
-.header__nav-item--has-sub:focus-within .header__nav-sub {
+.header__nav-list > li:has(> .sub-menu):hover .sub-menu,
+.header__nav-list > li:has(> .sub-menu):focus-within .sub-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-.header__nav-sub-link {
+.sub-menu a {
     display: block;
     padding: 10px 14px;
     border-radius: 10px;
@@ -352,29 +348,29 @@ $header-middle-slant: clamp(63px, 12.6vw, 144px);
         gap: 10px;
     }
 
-    .header__nav-item {
+    .header__nav-list > li {
         flex-direction: column;
         align-items: stretch;
         width: 100%;
     }
 
-    .header__nav-link {
+    .header__nav-list > li > a {
         width: 100%;
         justify-content: space-between;
         white-space: normal;
         line-height: 1.25;
     }
 
-    .header__nav-item--has-sub:hover .header__nav-caret,
-    .header__nav-item--has-sub:focus-within .header__nav-caret {
+    .header__nav-list > li:has(> .sub-menu):hover > a::after,
+    .header__nav-list > li:has(> .sub-menu):focus-within > a::after {
         transform: rotate(0);
     }
 
-    .header__nav-item--has-sub.is-open .header__nav-caret {
+    .header__nav-list > li:has(> .sub-menu).is-open > a::after {
         transform: rotate(180deg);
     }
 
-    .header__nav-sub {
+    .sub-menu {
         position: static;
         min-width: 0;
         width: 100%;
@@ -391,22 +387,22 @@ $header-middle-slant: clamp(63px, 12.6vw, 144px);
         transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.35s ease;
     }
 
-    .header__nav-item--has-sub:hover .header__nav-sub,
-    .header__nav-item--has-sub:focus-within .header__nav-sub {
+    .header__nav-list > li:has(> .sub-menu):hover .sub-menu,
+    .header__nav-list > li:has(> .sub-menu):focus-within .sub-menu {
         opacity: 0;
         visibility: hidden;
         max-height: 0;
         margin: 0;
     }
 
-    .header__nav-item--has-sub.is-open .header__nav-sub {
+    .header__nav-list > li:has(> .sub-menu).is-open .sub-menu {
         opacity: 1;
         visibility: visible;
         max-height: 280px;
         margin: 8px 0 0;
     }
 
-    .header__nav-sub-link {
+    .sub-menu a {
         padding: 10px 14px 10px 18px;
     }
 }
@@ -464,7 +460,7 @@ $header-middle-slant: clamp(63px, 12.6vw, 144px);
 }
 
 @media only screen and (max-width: 1200px) {
-    .header__nav-link {
+    .header__nav-list > li > a {
         font-size: 13px;
         padding: 9px 14px;
     }

@@ -1,45 +1,33 @@
 
-// $(function () {
-// 	$('.main-sec__slider').slick({
-// 		infinite: true,
-// 		speed: 1000,
-// 		adaptiveHeight: true,
-// 		slidesToScroll: 1,
-// 		dots: false,
-// 		slidesToShow: 1,
-// 		prevArrow: '<div class="ar_slier prev-ar_slide"><div class="ar-ic-slider"></div></div>',
-// 		nextArrow: '<div class="ar_slier next-ar_slide"><div class="ar-ic-slider"></div></div>',
-// 		responsive: [
-// 			{
-// 				breakpoint: 1200,
-// 				settings: {
-// 					autoplay: true,
-// 					autoplaySpeed: 3000,
-// 				}
-// 			},
-// 			{
-// 				breakpoint: 900,
-// 				settings: {
-// 					autoplay: true,
-// 					autoplaySpeed: 3000,
-// 					arrows: false,
-// 				}
-// 			},
-// 		]
-// 	});
+$(function () {
+	//для якорей
+    jQuery(function ($) {
+        $('a[href*="#"]').on('click.smoothscroll', function (e) {
+            var hash = this.hash, _hash = hash.replace(/#/, ''), theHref = $(this).attr('href').replace(/#.*/, '');
+            if (theHref && location.href.replace(/#.*/, '') != theHref) return;
+            var $target = _hash === '' ? $('body') : $(hash + ', a[name="' + _hash + '"]').first();
+            if (!$target.length) return;
+            e.preventDefault();
+            $('html, body').stop().animate({ scrollTop: $target.offset().top - 0 }, 800, 'swing', function () {
+                window.location.hash = hash;
+            });
+        });
+    });
 
-// });
+});
 
 
 (function () {
 	var mobMenu = document.querySelector('.header-mob-meny');
 	if (!mobMenu) return;
 
-	var accordionItems = mobMenu.querySelectorAll('.header__nav-item--has-sub');
+	var accordionItems = mobMenu.querySelectorAll('.header__nav-list > li:has(> .sub-menu)');
 
 	accordionItems.forEach(function (item) {
-		var trigger = item.querySelector('.header__nav-link');
+		var trigger = item.querySelector(':scope > a');
 		if (!trigger) return;
+
+		trigger.setAttribute('aria-expanded', 'false');
 
 		trigger.addEventListener('click', function (e) {
 			e.preventDefault();
@@ -49,7 +37,7 @@
 			accordionItems.forEach(function (otherItem) {
 				if (otherItem === item) return;
 				otherItem.classList.remove('is-open');
-				var otherTrigger = otherItem.querySelector('.header__nav-link');
+				var otherTrigger = otherItem.querySelector(':scope > a');
 				if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
 			});
 
@@ -92,5 +80,4 @@ window.addEventListener('load', function () {
 
     openMobMenu()
 }, false);
-
 

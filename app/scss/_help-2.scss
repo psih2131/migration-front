@@ -297,6 +297,17 @@
     }
 }
 
+.help-2-sec__cluster-pre-text {
+    padding: 16px 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    background: #FAFBFC;
+    /* or 162% */
+
+    color: #4A5565;
+}
+
 @media only screen and (max-width: 1300px) {
     .help-2-sec__nav-item {
         width: calc(33.333% - 16px);
@@ -339,5 +350,10 @@
 
     .help-2-sec__acc-panel {
         padding: 0 16px 16px;
+    }
+
+    .help-2-sec__cluster-pre-text {
+        line-height: 1.4;
+        padding: 16px;
     }
 }
